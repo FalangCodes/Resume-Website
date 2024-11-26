@@ -1,0 +1,205 @@
+.Heading{
+    text-align : center;
+    font-family :Algerian;
+    font-size : 25px;
+    margin-right: -25px;
+    margin-top: -10px;
+}
+    .Heading_photo {
+        margin-left: 4px;
+        margin-top: -165px;
+    }
+
+body {
+    background-color: whitesmoke; 
+    font-family: Arial; 
+    font-size: 20px;
+}
+
+.NavBar {
+    background-color: lightgrey;
+    text-align: center;
+    color: rgb(255, 143, 0, 1);
+    margin-top: 60px;
+    position: relative;
+    bottom: 50px;
+    font-size: 23px;
+}
+
+    .NavBar ul {
+        display: inline-flex;
+        list-style: none;
+    }
+
+        .NavBar ul li {
+            width: 120px;
+            margin: -10px;
+            padding: 15px;
+            position: relative;
+        }
+
+            .NavBar ul li a {
+                text-decoration: none;
+                color: lightblue;
+            }
+
+            .active, .NavBar ul li:hover {
+                    background-color: dimgray;
+                    border-radius: 3px;
+                }
+
+.heading2 {
+    text-align: center;
+    margin-top: -25px;
+}
+
+h2.heading2:hover, h2.heading2:focus {
+    transition: .1s;
+    transform: scale(1.75);
+}
+
+
+.LeftTxt {
+    width: 47%; 
+    float: left; 
+    text-align: left; 
+    margin-top: 0px;
+}
+
+.RightTxt {
+    width: 47%; 
+    float: right; 
+    text-align: left;
+}
+
+.heading3 {
+    text-align: center;
+}
+
+h2.heading3:hover, h2.heading3:focus {
+    transition: .2s;
+    transform: scale(1.75);
+}
+
+.Portfolios {
+    display: none;
+    width: 240px;
+    font-size: 20px;
+}
+
+    .NavBar ul li:hover .Portfolios {
+        display: block;
+        position: absolute;
+        background-color: lightgray;
+        margin-top: 15px;
+        margin-left: -55px;
+
+    }
+
+        .NavBar ul li:hover .Portfolios ul {
+            display: block;
+            height: 200px;
+            background-color: dimgray;
+        }
+
+            .NavBar ul li:hover .Portfolios ul li {
+                margin-top: 15px;
+                width: 150px;
+                border-bottom: 1px solid black;
+                text-align: left;
+                position: static;
+            }
+
+                .NavBar ul li:hover .Portfolios ul li:last-child {
+                    border-bottom:rgb(216, 97, 97);
+                }
+
+.Games_1 {
+    text-align: center;
+}
+
+.Editor_headings {
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 55px;
+    text-align: center;
+}
+
+.contactMe {
+    margin-left: 2%;
+    display: inline-flex;
+}
+
+    .contactMe form button {
+        align-content: space-evenly;
+    }
+
+.floatGIF {
+    text-align: center;
+    margin-left: 110px;
+    margin-top: -55px;
+}
+
+.floatGIF img {
+    width: 700px;
+    height: 250px;
+
+}
+
+.footer {
+    font-size: smaller;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+    .footer .right {
+        text-align: right;
+        margin-right: 25px;
+    }
+        .footer .right ul {
+        background-color: rgb(216, 97, 97);
+        }
+            .footer .right li {
+                color: black;
+            }
+            .footer .right a {
+                text-decoration: none;
+                color: black;
+            }
+                .footer .right a img {
+                    width: 20px;
+                    height: 20px;
+                }
+    .footer .center {
+        text-align: center;
+    }
+        .footer .center li {
+            color: black;
+            list-style: none;
+            margin-left: 17px;
+            text-align: left;
+        }
+            .footer .center a {
+                text-decoration: none;
+                color: black;
+            }
+                .footer .center a img {
+                    width: 20px;
+                    height: 20px;
+                }
+    .footer .left {
+        text-align: left;
+        margin-left: 25px;
+    }
+        .footer .left li {
+            color: black;
+            list-style: none;
+            margin-left: -35px;
+        }
+            .footer .left a {
+                text-decoration: none;
+                color: black;
+            }
+                .footer .left a img {
+                    width: 20px;
+                    height: 20px;
+                }

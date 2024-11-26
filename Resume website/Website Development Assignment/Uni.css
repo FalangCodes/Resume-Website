@@ -1,0 +1,213 @@
+body{
+    background-color: black;
+}
+
+h1 {
+    color:rgb(255, 143, 0, 1);
+    background-color: none;
+    font-size: 60px;
+    text-align: center;
+    font-weight: normal;
+    border: none;
+    margin-top: -105px;
+    font-family: Georgia;
+    margin-bottom: 10px;
+    }
+    
+  .Logo-picture{
+  width: 120px;
+  margin-left: 40px;
+  margin-top: -25px;
+  padding-top: 37px;
+  }
+  
+  .First-picture{
+    display: block;
+    width: 1300px;
+    margin-left: 10px ;
+    margin-top: 100px;
+  }
+  
+  hr{
+    border-color: rgb(70, 41, 4);
+  }
+  
+  
+  .NavBar{
+    background: rgb(0, 0, 0);
+    text-align: center;
+    color: rgb(255, 143, 0, 1);
+    margin-top: -60px;
+    position: relative;bottom: 50px;
+    font-size: 23px;
+  }
+  
+  .NavBar ul{
+  
+    display: inline-flex;
+    list-style: none;
+  }
+  
+  .NavBar ul li{
+    width: 120px;
+    margin: -10px;
+    padding: 15px;
+    margin-left: 140px;
+    position: relative; left: -90px;
+  
+  }
+  
+  .NavBar ul li a{
+    text-decoration: none;
+    color: rgb(255, 143, 0, 1);
+  }
+  
+  .active, .NavBar ul li:hover {
+    background-color: rgb(48, 48, 48);
+    border-radius: 3px;
+  }
+  
+  
+  
+  .Universities-submenu{
+    display: none;
+    width: 240px;
+    font-size: 20px;
+     
+  }
+  
+  .NavBar ul li:hover .Universities-submenu{
+    display: block;
+    position: absolute;
+    background-color: black;
+    margin-top: 15px;
+    margin-left: -15px;
+  }
+  
+  
+  .NavBar ul li:hover .Universities-submenu ul {
+    display: block;
+    margin: 10px;
+  }
+  
+  
+  .NavBar ul li:hover .Universities-submenu ul li {
+    width: 150px;
+    padding-top: 11px;
+    padding-left: -200px;
+    border-bottom: 1px solid rgb(255, 143, 0, 1);
+    border-radius: 0px;
+    text-align: left;
+    position: relative; left: -150px;
+  }
+  
+  
+  
+  .NavBar ul li:hover .Universities-submenu ul li:last-child {
+    border-bottom: none;
+  }
+  
+  .Bottom-line{
+    margin-bottom: 20px;
+  }
+  
+  
+  .Copyright{
+    text-align: center;
+    color: white;
+  }
+  
+  
+  .purpose-text{
+    color: rgb(189, 184, 184);
+    font-size: 24px;
+    margin-top: 40px;
+    margin-left: 150px;
+    margin-right: 130px;
+    letter-spacing: 3px;
+    text-align: center;
+    text-decoration: solid;
+    font-family: Garamond;
+  
+  }
+  
+  
+  .Purpose-heading{
+    color:rgb(255, 143, 0, 1);
+    text-decoration: underline;
+    margin-top: -10px;
+    font-size: 50px;
+    font-family: Garamond;
+  }
+  
+  .Aboutus-heading{
+    color: rgb(255, 143, 0, 1);
+    text-align: center;
+    font-size: 30px;
+    text-decoration: underline;
+  }
+  
+  .Words-of-inspiration{
+    color: rgb(131, 127, 127);
+    font-size: 60px;
+    margin-top: 100px;
+    margin-left: 40px;
+    margin-right: 30px;
+    letter-spacing: 3px;
+    text-align: center;
+    font-family: Garamond;
+    font-style: oblique;
+  }
+  
+  .Aboutus-info{
+    color: rgb(189, 184, 184);
+    font-size: 20px;
+    margin-top: 40px;
+    margin-left: 300px;
+    margin-right: 280px;
+    margin-bottom: 70px;
+    letter-spacing: 3px;
+    text-align: center;
+    text-decoration: solid;
+    font-family:serif;
+  }
+  
+  .Contacts-submenu{
+    display: none;
+    font-size: 17px;
+  }
+
+  .Contacts-submenu li{
+    margin-left: -50px;
+  }
+  
+  .NavBar ul li:hover .Contacts-submenu{
+    display: block;
+    position: absolute;
+    background-color: black;
+    margin-top: 15px;
+    margin-left: -40px;
+  }
+  
+  
+  .NavBar ul li:hover .Contacts-submenu ul {
+    display: block;
+    margin: 10px;
+    margin-left: -19px;
+  }
+  
+  
+  .NavBar ul li:hover .Contacts-submenu ul li {
+    width: 180px;
+    padding-top: 11px;
+    padding-left: -200px;
+    border-bottom: 1px solid rgb(255, 143, 0, 1);
+    border-radius: 0px;
+    margin-bottom: 30px;
+    text-align: left;
+    position: relative; left: -150px;
+  }
+
+  .NavBar ul li:hover .Contacts-submenu ul li:last-child {
+    border-bottom: none;
+  }

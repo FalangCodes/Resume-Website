@@ -1,0 +1,154 @@
+html {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: medium;
+    max-width: 100%;
+}
+
+body {
+    background-color: rgb(255, 255, 255);
+}
+
+.QuickNav {
+    background-color: gray;
+    margin-top: -8px;
+    line-height: 0px;
+    
+}
+
+.QuickNav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    margin-left: 115px;
+    font-size: medium;
+}
+
+.QuickNav li {
+    
+    display: inline-block;
+    line-height: 35px;
+    vertical-align: middle;
+    margin: 0px;
+    font-size: medium;
+}
+
+.QuickNav a {
+    color: white;
+    text-decoration: none;
+}
+
+.QuickNav strong {
+    color: #ffffff;
+}
+
+.SPU {
+    display: inline-flex;
+    margin-left: 18%;
+    margin-top: 10px;
+}
+
+.SPU p {
+    margin-left: 12px;
+    margin-top: 40px;
+    font-size: 26px;
+    color: rgb(187, 31, 52);
+}
+
+.AboutUs {
+    text-align: left;
+    margin-left: 17%;
+    margin-right: 17%;
+    color: gray;
+}
+
+.AboutUs a {
+    text-decoration: none;
+    color: rgb(187, 31, 52);
+}
+
+.AcademicSchools {
+    margin-left: 14%;
+    margin-right: 20%;
+    background-color: rgb(255, 255, 255);
+}
+
+.AcademicSchools ul {
+    display: inline-flex;
+    list-style: none;
+}
+.AcademicSchools li {
+    margin-left: -5px;
+    padding: 0%;
+    margin: 32px;
+    background-color: rgb(255, 255, 255);
+}
+
+.AcademicSchools figure {
+    margin-left: -25px;
+}
+.AcademicSchools figcaption {
+    margin-left: -20px;
+    text-align: center;
+}
+
+img.AcademicSchools:hover, img.AcademicSchools:focus {
+    transition: .2s;
+    transform: scale(1.15);
+  }
+  
+
+.LatestNews {
+    
+    display: block;
+}
+
+.LatestNews ul {
+    background-color: lightgray;
+    list-style: none;
+}
+.LatestNews li {
+    margin: 5px;
+    display: inline-block;
+    font-size: larger;
+    margin-left: -25px;
+}
+
+.LatestNews a {
+    text-decoration: none;
+    color: black;
+}
+
+.SocialMedia {
+    text-align: center;
+    display: block;
+}
+
+.SocialMedia ul {
+    background-color: lightgray;
+    list-style: none;
+}
+
+.SocialMedia li {
+    margin: 35px;
+    display: inline-block;
+}
+
+.footer {
+    background-color: rgb(214, 37, 60);
+    margin-bottom: -20px;
+}
+
+.footer p {
+    line-height: 35px;
+    text-align: center;
+    color: #ffffff;
+}
+
+footer a {
+    text-decoration: none;
+    color: #ffffff;
+}
+
+a.BottomLinks {
+    color: #836969;
+}
