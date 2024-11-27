@@ -1,132 +1,141 @@
 ﻿<!DOCTYPE html>
-
-<html lang="en-za">
+<html lang="en">
 <head>
-    <meta charset="utf-8"/>
-    <meta name="author" content="Kgotsofalang Kakudi"/>
-    <meta name="description" content="My first official webpage"/>
-    <title>Falang - Developer | Investor</title>
-    <link href="images+docs/Falang_logo.png" rel="icon" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Portfolio</title>
     <link rel="stylesheet" href="Resume.css">
-    <link rel="stylesheet" href="Resume.js">
-    <link rel="stylesheet" href="Resume.py">
 </head>
-
-
 <body>
-    <div class="Heading">
-        <h1>Kgotsofalang Mohau Kakudi</h1>
-        <h3 style="margin-top: -25px;">Resume</h3>
-    </div>
-    <div class="Heading_photo">
-        <img src="images+docs/Falang_logo.png" alt="Kgotsofalang" style="width:150px;height:150px;">
-    </div>
-    <hr style="margin-top: 3px;" />
+    <!-- Header Section -->
+    <header class="header">
+        <div class="Heading">
+            <h1>Welcome Abroad!</h1>
+            <p>A showcase of my work and skills</p>
+        </div>
+    </header>
 
-    <!--Nav bar buttons-->
-
-    <div class="NavBar">
+    <!-- Navigation Bar -->
+    <nav class="NavBar">
         <ul>
-            <li class="active">
-                <a href="#">Home</a>
-            </li>
-
-
-            <li class="active">
-                <a href="My_CV.docx">C.V</a>
-            </li>
-
-
-            <li class="active">
-                <a href="#">Portfolio</a>
+            <li><a href="#about">About Me</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#contact">Contact</a></li>
+            <li>
+                <a href="#portfolio">Portfolio</a>
                 <div class="Portfolios">
                     <ul>
-                        <li>
-                            <a href="file:///C:/Users/Admin/OneDrive/Desktop/Private%20work/Websites/Resume%20website/Kgotsofalang%20Kakudi.html">
-                                Resume website
-                            </a>
-                        </li>
-                        <li>
-                            <a href="Website Development Assignment/Home_page.html" target="_blank">University Hub website
-                            </a>
-                        </li>
-                        <li><a href="SPU website/SPU Home.html" target="_blank">SPU website</a></li>
+                        <li><a href="#web">Web Development</a></li>
+                        <li><a href="#design">Design</a></li>
+                        <li><a href="#other">Other</a></li>
                     </ul>
                 </div>
             </li>
         </ul>
+    </nav>
+
+    <!-- About Section -->
+<section id="about" class="about-section">
+    <h2>About Me</h2>
+    <div class="content">
+        <div class="LeftTxt">
+            <p>I am a dedicated 2nd-year ICT student at Sol Plaatje University, specializing in software development, data analytics, and backend systems. I have experience in Java, Python, SQL, and React.js, and I am skilled in .NET frameworks, HTML, and Visual Basic.
+                 I aim to design impactful tech solutions and continuously enhance my expertise to grow as a software developer.</p>
+                 <p>In my free time, I enjoy exploring new technologies, improving my coding skills, and collaborating with others to bring ideas to life.</p>
+        </div>
+        <div class="RightTxt">
+            
+        </div>
     </div>
-
-    <!--End of nav bar buttons-->
-
-    <h2 class="heading2">Who Is Kgotsofalang?</h2>
-
-    <hr style="margin-top: -10px;">
+</section>
 
 
-    <h2 class="heading3">My Goals In Information Technology</h2>
+    <!-- Projects Section -->
+<section id="projects" class="projects-section">
+    <h2>My Projects</h2>
+    <div class="project-grid">
+        <a href="https://example.com/project1" target="_blank" class="project">
+            <h3>Gamified-Learning Platform</h3>
+            <p>Inspired by a hackathon project by TelkomLearn, this platform is an interactive website designed to make learning fun on the Telkom Learn platform.</p>
+            <p>Languages: React.js</p>
+        </a>
+        <a href="https://example.com/project2" target="_blank" class="project">
+            <h3>React.js Keyboard</h3>
+            <p>A university project. This project was meant to create a virtual keybord using react. This intercative keyboard is meant to mimic the real world functions of a keyboard.</p>
+            <p>Languages: React.js</p>
+        </a>
+        <a href="Website Development Assignment\Home_page.html" target="_blank" class="project">
+            <h3>University Hub</h3>
+            <p>A university project. This platform is meant to provide students around South Africa with free access to information about universities.</p>
+            <p>Languages: HTML, CSS</p>
+    </a>
+    </div>
+</section>
 
-    <hr />
-
-   
-    <div class="contactMe">
-        <form action="SPU website/SPU Home.html">
-            <p>I'd like to hear about your thoughts please?</p>
-            <label for="First Name">First Name:</label>
-            <input type="text" First Name="First Name" id="First Name" placeholder="Selinah" required >
-            <br>
-            <label for="Last Name">Last Name:</label>
-            <input type="text" Last Name="Last Name" id="Last Name" placeholder="Moeng" required>
-            <br>
-            <label for="Comment">Comment:</label>
-            <input type="text" Comment="Comment" id="Comment" placeholder="I'd like to say.." required>
-            <br>
-            <button type="submit">Submit</button>
+<section class="services-section">
+    <div class="services-content">
+      <!-- Services text content -->
+      <div class="services-text">
+        <h2>Services & Expertise</h2>
+        <div class="service">
+          <h3>Python Data Analysis & Visualization</h3>
+          <p>Leveraging Python libraries like Pandas, NumPy, and Matplotlib to analyze and visualize data, transforming complex datasets into actionable insights.</p>
+        </div>
+        <div class="service">
+          <h3>Java Backend Development</h3>
+          <p>Building scalable and efficient server-side applications using Java, focusing on strong architecture, RESTful APIs, and integration with databases.</p>
+        </div>
+        <div class="service">
+          <h3>Database Administration (SQL & MongoDB)</h3>
+          <p>Managing and optimizing databases, designing efficient schemas, and performing data operations using SQL and NoSQL technologies like MongoDB.</p>
+        </div>
+        <div class="service">
+          <h3>React Development</h3>
+          <p>Creating interactive and responsive web applications with React, utilizing components, hooks, and state management for seamless user experiences.</p>
+        </div>
+      </div>
+  
+      <!-- Image section -->
+      <div class="services-image">
+        <img src="languages.jpg" alt="Programming Languages">
+      </div>
+    </div>
+  </section>
+  
+    <!-- Contact Section -->
+    <section id="contact" class="contact-section">
+        <h2>Contact Me</h2>
+        <form class="contactMe" action="#" method="post">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+            
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+            
+            <label for="message">Message:</label><br/>
+            <textarea id="message" name="message" rows="5" required></textarea>
+            <br/>
+            <button type="submit">Send Message</button>
         </form>
+    </section>
 
-        <div class="floatGIF">
-            <img src="images+docs/Float_in_name.gif" alt="Author logo">
+    <!-- Footer Section -->
+    <footer class="footer">
+        <div class="left">
+            <ul>
+                <li><a href="https://github.com/FalangCodes">GitHub</a></li>
+                <li><a href="https://www.linkedin.com/in/kgotsofalang-kakudi-822214230/?trk=opento_sprofile_goalscard">LinkedIn</a></li>
+            </ul>
         </div>
-    </div>
-
-    <div>
-        <hr style="margin-bottom: -12px;">
-    
-        <div class="footer">
-
-            <div class="left">
-                <h5 style="font-size: medium;">Quick links</h5>
-                <ul>
-                    <li><a href="">About</a></li>
-                    <li><a href="">Carriculum Vitae</a></li>
-                    <li><a href="">Portfolio</a></li>
-                </ul>
-            </div>
-                
-            <div class="center">
-                <h5 style="font-size: medium; margin-left: 25px;">Quick Navigation</h5>
-                <ul>
-                    <li><a href="countProgram/index.html">Counter game</a></li>
-                    <li><a href="Games/Hangman/Game.html">Hangman game</a></li>
-                    <li><a href="Games/Pacman/Game.html">Pacman game</a></li>
-                    <li><a href="Games/Rock Paper Sciscors/Game.html">Rock Paper Sciscors game</a></li>
-                </ul>
-            </div>
-
-            <div class="right">
-                <p>
-                    <a href="tel: +27 068 322 1603">+27 68 322 1603</a>
-                    <br><br>
-                    <a href="mailto:kgotsofalangkakudi@gmail.com">kgotsofalangkakudi@gmail.com</a>
-                    <br><br>
-                    <a href="https://www.instagram.com/falang_kp/">Instagram <img src="images+docs/IG_icon.png" alt=""></a> | 
-                    <a href="https://www.linkedin.com/in/kgotsofalang-kakudi-822214230/">LinkedIn <img src="images+docs/LI_icon.png" alt=""></a> |
-                    <a href="https://www.youtube.com/channel/UC_KJCtD_pl2RQaoZYzNWsng">YouTube <img src="images+docs/YT_icon.png" alt=""></a>
-                </p>
-            </div> 
+        <div class="center">
+            <p>&copy; 2024 Kgotsofalang Kakudi. All rights reserved.</p>
         </div>
-        <hr style="margin-top: -12px;">
-    </div>
-
+        <div class="right">
+            <ul>
+                <li><a href="https://twitter.com">Twitter</a></li>
+                <li><a href="https://www.instagram.com/falang_kp/">Instagram</a></li>
+            </ul>
+        </div>
+    </footer>
 </body>
 </html>
