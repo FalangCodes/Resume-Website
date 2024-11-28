@@ -9,7 +9,7 @@ body {
 
 /* Header */
 header {
-    background-color: lightgrey;
+    background-color: lightblue;
     padding: 20px;
     text-align: center;
 }
@@ -18,12 +18,12 @@ header h1 {
     font-family: 'Algerian', sans-serif;
     font-size: 36px;
     margin: 0;
-    color: rgb(110, 110, 110);
+    color: rgb(36, 36, 36);
 }
 
 /* Navigation Bar */
 nav {
-    background-color: dimgray;
+    background-color: rgb(87, 177, 106);
     text-align: center;
     padding: 10px 0;
 }
@@ -54,40 +54,7 @@ nav ul li a:hover {
     background-color: rgb(255, 143, 0);
 }
 
-/* Dropdown Menu */
-nav ul li ul {
-    display: none;
-    position: absolute;
-    top: 100%;
-    left: 0;
-    background-color: lightgrey;
-    list-style: none;
-    padding: 10px 0;
-    margin: 0;
-    border-radius: 5px;
-    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
-}
 
-nav ul li:hover ul {
-    display: block;
-}
-
-nav ul li ul li {
-    text-align: left;
-    padding: 5px 15px;
-}
-
-nav ul li ul li a {
-    color: black;
-    padding: 5px 10px;
-    display: block;
-    transition: background-color 0.3s;
-}
-
-nav ul li ul li a:hover {
-    background-color: rgb(255, 143, 0);
-    color: white;
-}
 
 .main {
     display: flex;
@@ -99,7 +66,7 @@ nav ul li ul li a:hover {
 .left-content, .right-content {
     flex: 1 1 calc(50% - 40px);
     margin: 20px;
-    background-color: white;
+    background-color: #f5f5f5;
     padding: 20px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     border-radius: 5px;
@@ -118,35 +85,88 @@ nav ul li ul li a:hover {
 }
 
 /* About Section */
-.about-section {
-    padding: 40px 20px;
-    background-color: white;
-    text-align: center;
-}
-
-.about-section h2 {
-    font-size: 28px;
-    margin-bottom: 20px;
-    color: dimgray;
-}
-
 .about-section .content {
     display: flex;
     flex-wrap: wrap;
     gap: 20px;
     justify-content: space-between;
+    align-items: center;
 }
 
-.about-section .LeftTxt, .about-section .RightTxt {
-    flex: 1 1 calc(50% - 20px);
-    text-align: left;
+.about-section h2 {
+    text-align: center;
+    color: rgb(115, 188, 212);
+    font-style: italic;
+}
+
+.about-section .LeftTxt {
+    flex: 1.5; /* Allow the text to take up more space */
     line-height: 1.6;
+    padding: 50px;
 }
 
-.about-section p {
-    margin: 0;
-    color: dimgray;
+.about-section .RightTxt {
+    flex: 1; /* Adjust image container space */
+    text-align: center;
 }
+
+.RightTxt img {
+    max-width: 300px; /* Limit the width of the image */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 10px; /* Subtle rounding for a polished look */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Optional: Add some depth */
+    margin: 0 auto; /* Center within the container */
+}
+
+.word-cloud {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    justify-content: center; /* Center the words within the container */
+    align-items: center;
+    max-width: 600px;
+    margin: 0 auto; /* Center within the section */
+    text-align: center;
+}
+
+.word-cloud .word {
+    font-family: 'Arial', sans-serif;
+    font-weight: bold;
+    color: #333;
+    display: inline-block;
+    text-transform: capitalize;
+    transition: transform 0.2s, color 0.2s;
+}
+
+.word-cloud .large {
+    font-size: 2.1rem;
+    color: #007bff;
+}
+
+.word-cloud .medium {
+    font-size: 1.5rem;
+    color: #28a745;
+}
+
+.word-cloud .small {
+    font-size: 1.0rem;
+    color: #6c757d;
+}
+
+/* Add hover effects */
+.word-cloud .word:hover {
+    transform: scale(1.1);
+    color: #ff5722;
+}
+
+.word-cloud .word:nth-child(odd) {
+    transform: rotate(-10deg);
+}
+.word-cloud .word:nth-child(even) {
+    transform: rotate(10deg);
+}
+
+
 
 /* Projects Section */
 .projects-section {
@@ -159,6 +179,7 @@ nav ul li ul li a:hover {
     font-size: 28px;
     margin-bottom: 20px;
     color: dimgray;
+    font-style: italic;
 }
 
 .project-grid {
@@ -242,6 +263,8 @@ nav ul li ul li a:hover {
     display: flex;
     justify-content: center;
     align-items: center;
+    border-radius: 10px; /* Subtle rounding for a polished look */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Optional: Add some depth */
   }
   
   .services-image img {
@@ -249,6 +272,11 @@ nav ul li ul li a:hover {
     height: auto;
     aspect-ratio: 16 / 16; /* Maintains a 16:4 aspect ratio */
     object-fit: cover;
+  }
+
+  .services-section h2{
+    color: rgb(115, 188, 212);
+    font-style: italic;
   }
   
 
@@ -270,14 +298,14 @@ nav ul li ul li a:hover {
 .contact-section form {
     display: flex;
     flex-direction: column;
-    align-items: center; /* Center content within the form */
-    background-color: #ffffff; /* Card background color */
-    border: 1px solid #ddd; /* Light border for definition */
-    border-radius: 10px; /* Rounded corners */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
-    padding: 2rem; /* Spacing inside the card */
+    align-items: center; 
+    background-color: #ffffff; 
+    border: 1px solid #ddd; 
+    border-radius: 10px; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+    padding: 2rem; 
     width: 100%;
-    max-width: 500px; /* Limit the width of the card */
+    max-width: 500px; 
 }
 
 /* Ensure inputs and textarea are centered within the form */
