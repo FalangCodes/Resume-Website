@@ -1,0 +1,285 @@
+/* General Section Styles */
+section {
+    padding: 60px 20px;  /* Adequate padding around content */
+    margin: 0 auto;
+    max-width: 1200px;
+  }
+  
+  /* Section Headers */
+  section h2 {
+    font-size: 32px;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 20px;
+    color: #333;
+  }
+  
+  /* AboutMe Section */
+.AboutMe {
+  background-color: #f4f4f4;
+  color: #333;
+  border-bottom: 2px solid #ddd;
+  padding: 60px 20px;
+}
+
+/* AboutMe Heading */
+.AboutMe h2 {
+  font-size: 32px;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+/* AboutMe Content */
+.AboutMe .about-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 30px;
+  flex-wrap: wrap;  /* Ensures responsiveness */
+  text-align: left;
+}
+
+/* AboutMe Text */
+.AboutMe p {
+  font-size: 18px;
+  line-height: 1.6;
+  max-width: 700px;
+  margin: 0;
+  flex: 1;  /* Allows the text to take up available space */
+}
+
+/* AboutMe Image */
+.AboutMe .about-image {
+  width: 250px;
+  height: 250px;
+  object-fit: cover;  /* Ensures the image covers the area without distortion */
+  border-radius: 50%;
+  border: 5px solid #ddd; /* Soft border around the image */
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease;
+}
+
+.AboutMe .about-image:hover {
+  transform: scale(1.05);  /* Slight zoom effect on hover */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .AboutMe .about-content {
+    flex-direction: column;  /* Stacks the image and text vertically */
+    text-align: center;
+  }
+
+  .AboutMe .about-image {
+    width: 150px;  /* Resize the image on mobile */
+    height: 150px;
+    margin-top: 20px;
+  }
+
+  .AboutMe p {
+    font-size: 16px;
+    max-width: 100%;
+  }
+}
+
+  
+ /* Skills Section */
+.Skills {
+  background-color: #ffffff;
+  color: #333;
+  border-bottom: 2px solid #ddd;
+  padding: 60px 20px;
+}
+
+.Skills h2 {
+  font-size: 32px;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.Skills .skill-list {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+  margin-top: 30px;
+}
+
+.Skills .skill-item {
+  background-color: #333;
+  color: white;
+  padding: 12px 20px;
+  border-radius: 25px;
+  font-weight: bold;
+  font-size: 16px;
+  transition: background-color 0.3s;
+  text-align: center;
+  white-space: nowrap;  /* Prevents skill names from breaking into multiple lines */
+}
+
+.Skills .skill-item:hover {
+  background-color: #ffcc00;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .Skills .skill-list {
+    gap: 15px;
+    justify-content: center;
+  }
+  
+  .Skills .skill-item {
+    font-size: 14px; /* Adjust font size for mobile screens */
+    padding: 10px 15px;
+  }
+}
+
+  
+  /* Projects Section */
+.Projects {
+  background-color: #f9f9f9;
+  padding: 60px 20px; /* Add some padding */
+}
+
+.project-cards-container {
+  display: flex;
+  flex-wrap: wrap; /* Allow wrapping on smaller screens */
+  gap: 30px;
+  justify-content: space-between;
+}
+
+/* Ensure the card is a block element so the entire area is clickable */
+.project-card {
+  background-color: white;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  padding: 20px;
+  width: 30%;
+  box-sizing: border-box;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  transition: box-shadow 0.3s, transform 0.3s;
+  display: block;  /* Makes the card take the full width of the container */
+  text-decoration: none; /* Removes underline from links */
+  color: inherit; /* Ensures text color is inherited from parent */
+}
+
+.project-card:hover {
+  box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.15);
+  transform: translateY(-10px);
+}
+
+.project-card h3, .project-card p {
+  margin: 0; /* Remove margin from h3 and p to prevent spacing issues */
+}
+
+
+.project-card p {
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+/* Icons */
+.Projects .project-card .icons {
+  display: flex;
+  justify-content: flex-start;
+  gap: 15px; /* Space between icons */
+}
+
+.Projects .project-card .icon {
+  font-size: 20px;
+  color: #333;
+  transition: color 0.3s;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .project-cards-container {
+    flex-direction: column; /* Stack cards vertically on smaller screens */
+    align-items: center;
+  }
+
+  .project-card {
+    width: 100%; /* Full width on small screens */
+    margin: 10px 0; /* Space between stacked cards */
+  }
+}
+
+  
+  /* Experience Section */
+  .Experience {
+    background-color: #ffffff;
+    color: #333;
+    border-bottom: 2px solid #ddd;
+  }
+  
+  .Experience ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .Experience li {
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-left: 5px solid #333;
+    padding-left: 50px;
+  }
+  
+  .Experience li h4 {
+    font-size: 22px;
+    margin-bottom: 10px;
+  }
+  
+  .Experience li p {
+    font-size: 16px;
+  }
+  
+  /* Education Section */
+  .Education {
+    background-color: #f4f4f4;
+    color: #333;
+  }
+  
+  .Education ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .Education li {
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-left: 5px solid #333;
+  }
+  
+  .Education li h4 {
+    font-size: 22px;
+    margin-bottom: 10px;
+  }
+  
+  .Education li p {
+    font-size: 16px;
+  }
+  
+ /* Responsive Design */
+@media (max-width: 768px) {
+  section {
+    padding: 40px 20px;
+  }
+
+  .Skills .skill-list {
+    gap: 20px;
+    justify-content: center;
+  }
+
+  .Experience li, .Education li {
+    padding: 15px;
+  }
+}
+  
