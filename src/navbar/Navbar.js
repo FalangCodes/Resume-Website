@@ -7,7 +7,6 @@ function Navbar() {
 
   const toggleMenu = () => setIsMenuOpen(!isMenuOpen);
 
-  // Close the menu automatically if the window resizes to a larger screen
   useEffect(() => {
     const handleResize = () => {
       if (window.innerWidth > 768) {
@@ -57,6 +56,9 @@ function Navbar() {
           <Link to="Education" smooth={true} activeClass="active" onClick={() => setIsMenuOpen(false)}>
             Education
           </Link>
+        </li>
+        <li><a href="\Kgotsofalang_Kakudi_Resume.pdf" target="_blank" rel="noopener noreferrer">
+          <button className="view-fullscreen-button">View Resume</button></a>    
         </li>
       </ul>
     </nav>

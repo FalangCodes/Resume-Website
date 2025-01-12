@@ -45,6 +45,23 @@ nav .menu a:hover {
   color: #ffcc00;
 }
 
+nav .menu button {
+  color: white; 
+  font-size: 18px; 
+  font-weight: bold;
+  border: none; 
+  background: none; 
+  cursor: pointer; 
+  transition: color 0.3s; 
+  margin: 0 15px;
+  padding: 0; 
+}
+
+nav .menu button:hover {
+  color: #ffcc00;
+}
+
+
 /* Mobile View */
 nav .menu-toggle {
   display: none;
@@ -86,6 +103,10 @@ nav .menu.open {
   nav .menu li {
     margin: 10px 0;
     padding-left: 27px;
+  }
+
+  nav .menu button{
+    margin: 10px 0;
   }
 
   nav .menu-toggle {

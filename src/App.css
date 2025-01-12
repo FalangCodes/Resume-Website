@@ -1,13 +1,13 @@
 html, body {
   margin: 0;
   padding: 0;
-  overflow-x: hidden; /* Prevent horizontal scrolling */
+  overflow-x: hidden; 
 }
 
 
 /* General Section Styles */
 section {
-    padding: 60px 20px;  /* Adequate padding around content */
+    padding: 60px 20px;  
     margin: 0 auto;
     max-width: 1200px;
   }
@@ -43,7 +43,7 @@ section {
   align-items: center;
   justify-content: center;
   gap: 30px;
-  flex-wrap: wrap;  /* Ensures responsiveness */
+  flex-wrap: wrap; 
   text-align: left;
 }
 
@@ -53,33 +53,33 @@ section {
   line-height: 1.6;
   max-width: 700px;
   margin: 0;
-  flex: 1;  /* Allows the text to take up available space */
+  flex: 1;  
 }
 
 /* AboutMe Image */
 .AboutMe .about-image {
   width: 250px;
   height: 250px;
-  object-fit: cover;  /* Ensures the image covers the area without distortion */
+  object-fit: cover;  
   border-radius: 50%;
-  border: 5px solid #ddd; /* Soft border around the image */
+  border: 5px solid #ddd; 
   box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
   transition: transform 0.3s ease;
 }
 
 .AboutMe .about-image:hover {
-  transform: scale(1.05);  /* Slight zoom effect on hover */
+  transform: scale(1.05); 
 }
 
 /* Responsive Design */
 @media (max-width: 768px) {
   .AboutMe .about-content {
-    flex-direction: column;  /* Stacks the image and text vertically */
+    flex-direction: column;  
     text-align: center;
   }
 
   .AboutMe .about-image {
-    width: 150px;  /* Resize the image on mobile */
+    width: 150px; 
     height: 150px;
     margin-top: 20px;
   }
@@ -123,7 +123,7 @@ section {
   font-size: 16px;
   transition: background-color 0.3s;
   text-align: center;
-  white-space: nowrap;  /* Prevents skill names from breaking into multiple lines */
+  white-space: nowrap; 
 }
 
 .Skills .skill-item a{
@@ -142,7 +142,7 @@ section {
   }
   
   .Skills .skill-item {
-    font-size: 14px; /* Adjust font size for mobile screens */
+    font-size: 14px; 
     padding: 10px 15px;
   }
 }
@@ -156,12 +156,11 @@ section {
 
 .project-cards-container {
   display: flex;
-  flex-wrap: wrap; /* Allow wrapping on smaller screens */
+  flex-wrap: wrap; 
   gap: 30px;
   justify-content: space-between;
 }
 
-/* Ensure the card is a block element so the entire area is clickable */
 .project-card {
   background-color: white;
   border: 1px solid #ddd;
@@ -171,9 +170,9 @@ section {
   box-sizing: border-box;
   box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
   transition: box-shadow 0.3s, transform 0.3s;
-  display: block;  /* Makes the card take the full width of the container */
-  text-decoration: none; /* Removes underline from links */
-  color: inherit; /* Ensures text color is inherited from parent */
+  display: block;  
+  text-decoration: none; 
+  color: inherit; 
 }
 
 .project-card:hover {
@@ -182,7 +181,7 @@ section {
 }
 
 .project-card h3, .project-card p {
-  margin: 0; /* Remove margin from h3 and p to prevent spacing issues */
+  margin: 0; 
 }
 
 
@@ -195,7 +194,7 @@ section {
 .Projects .project-card .icons {
   display: flex;
   justify-content: flex-start;
-  gap: 15px; /* Space between icons */
+  gap: 15px; 
 }
 
 .Projects .project-card .icon {
@@ -207,13 +206,13 @@ section {
 /* Responsive Design */
 @media (max-width: 768px) {
   .project-cards-container {
-    flex-direction: column; /* Stack cards vertically on smaller screens */
+    flex-direction: column; 
     align-items: center;
   }
 
   .project-card {
-    width: 100%; /* Full width on small screens */
-    margin: 10px 0; /* Space between stacked cards */
+    width: 100%; 
+    margin: 10px 0; 
   }
 }
 

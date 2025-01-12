@@ -31,7 +31,7 @@ footer {
   }
   
   .social-links a:hover {
-    color: #7de4f7; /* Change color on hover */
+    color: #7de4f7; 
   }
   
   @media (max-width: 768px) {
