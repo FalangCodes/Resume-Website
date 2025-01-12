@@ -1,3 +1,10 @@
+html, body {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden; /* Prevent horizontal scrolling */
+}
+
+
 /* General Section Styles */
 section {
     padding: 60px 20px;  /* Adequate padding around content */
@@ -16,7 +23,7 @@ section {
   
   /* AboutMe Section */
 .AboutMe {
-  background-color: #f4f4f4;
+  background-color: #e9f9fa;
   color: #333;
   border-bottom: 2px solid #ddd;
   padding: 60px 20px;
@@ -86,7 +93,7 @@ section {
   
  /* Skills Section */
 .Skills {
-  background-color: #ffffff;
+  background-color: #f4fdfc;
   color: #333;
   border-bottom: 2px solid #ddd;
   padding: 60px 20px;
@@ -108,7 +115,7 @@ section {
 }
 
 .Skills .skill-item {
-  background-color: #333;
+  background-color: #ffffff;
   color: white;
   padding: 12px 20px;
   border-radius: 25px;
@@ -117,6 +124,10 @@ section {
   transition: background-color 0.3s;
   text-align: center;
   white-space: nowrap;  /* Prevents skill names from breaking into multiple lines */
+}
+
+.Skills .skill-item a{
+  text-decoration: none;
 }
 
 .Skills .skill-item:hover {
@@ -139,8 +150,8 @@ section {
   
   /* Projects Section */
 .Projects {
-  background-color: #f9f9f9;
-  padding: 60px 20px; /* Add some padding */
+  background-color: #f2f5f4;
+  padding: 60px 20px; 
 }
 
 .project-cards-container {
@@ -213,6 +224,10 @@ section {
     color: #333;
     border-bottom: 2px solid #ddd;
   }
+
+  .Experience p strong{
+    color: #20aeb3;
+  }
   
   .Experience ul {
     list-style-type: none;
@@ -242,6 +257,10 @@ section {
   .Education {
     background-color: #f4f4f4;
     color: #333;
+  }
+
+  .Education p strong{
+    color: #20aeb3;
   }
   
   .Education ul {

@@ -2,7 +2,7 @@
 footer {
     background-color: #333;
     color: white;
-    padding: 20px;
+    padding: 10px 10px 10px 10px;
     text-align: center;
   }
   
@@ -31,7 +31,7 @@ footer {
   }
   
   .social-links a:hover {
-    color: #ffcc00; /* Change color on hover */
+    color: #7de4f7; /* Change color on hover */
   }
   
   @media (max-width: 768px) {

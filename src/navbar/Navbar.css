@@ -1,63 +1,96 @@
 nav {
-    background-color: #333;
-    padding: 10px 20px;
-    position: sticky;
-    top: 0;
-    width: 100%;
-    z-index: 10;
+  background-color: rgb(120, 201, 221);
+  padding: 10px 20px;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 10;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+nav .navbar-brand {
+  color: rgb(255, 255, 255);
+  font-size: 24px;
+  font-weight: bold;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+nav .menu {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  flex-grow: 1;
+  padding-right: 100px;
+}
+
+nav .menu li {
+  margin: 0 15px;
+  cursor: pointer;
+}
+
+nav .menu a {
+  color: rgba(255, 255, 255, 0.986);
+  text-decoration: none;
+  font-size: 18px;
+  font-weight: bold;
+  transition: color 0.3s;
+}
+
+nav .menu a:hover {
+  color: #ffcc00;
+}
+
+/* Mobile View */
+nav .menu-toggle {
+  display: none;
+  font-size: 30px;
+  color: white;
+  background: transparent;
+  border: none;
+}
+
+nav .menu.open {
+  display: block;
+  width: 100%;
+}
+
+@media (max-width: 768px) {
+  nav {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
   }
-  
+
+  nav .navbar-brand {
+    margin-bottom: 0; 
+    text-align: center; 
+    flex-grow: 1; 
+  }
+
   nav .menu {
-    list-style-type: none;
-    padding: 0;
-    margin: 0;
-    display: flex;
-    justify-content: center;
-  }
-  
-  nav .menu li {
-    margin: 0 15px;
-  }
-  
-  nav .menu a {
-    color: white;
-    text-decoration: none;
-    font-size: 18px;
-    font-weight: bold;
-    transition: color 0.3s;
-  }
-  
-  nav .menu a:hover {
-    color: #ffcc00;
-  }
-  
-  /* Mobile View */
-  nav .menu-toggle {
     display: none;
-    font-size: 30px;
-    color: white;
-    background: transparent;
-    border: none;
-  }
-  
-  nav .menu.open {
-    display: block;
+    flex-direction: column;
+    align-items: center;
     width: 100%;
+    position: absolute;
+    top: 50px; 
+    left: 0;
+    background-color: rgb(100, 215, 219);
   }
-  
-  @media (max-width: 768px) {
-    nav .menu {
-      display: none;
-      flex-direction: row;
-      align-items: center;
-    }
-  
-    nav .menu li {
-      margin: 10px 0;
-    }
-  
-    nav .menu-toggle {
-      display: block;
-    }
+
+  nav .menu li {
+    margin: 10px 0;
+    padding-left: 27px;
   }
-  
+
+  nav .menu-toggle {
+    display: block;
+    position: absolute;
+    left: 20px; 
+  }
+}

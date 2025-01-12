@@ -2,7 +2,7 @@ import './App.css';
 import myPhoto from'./profile.jpg';
 import Navbar from './navbar/Navbar';
 import Footer from './footer/Footer';
-import { FaReact, FaNodeJs, FaDatabase, FaGithub, FaHtml5, FaCss3Alt  } from 'react-icons/fa';
+import { FaReact, FaNodeJs, FaDatabase, FaGithub, FaHtml5, FaCss3Alt, FaGitAlt, FaPython  } from 'react-icons/fa';
 
 function App() {
   return (
@@ -13,7 +13,7 @@ function App() {
         <h2>About Me</h2>
         <div className="about-content">
           <p>
-            Hello! I'm Kgotsofalang, a passionate ICT student and aspiring software developer with a love for backend development and problem-solving. I'm constantly learning and growing, aiming to create innovative and efficient solutions.
+            Hello! My name is Kgotsofalang Kakudi, a passionate ICT student and aspiring software developer with a love for backend development and problem-solving. I am constantly learning and growing, aiming to create innovative and efficient solutions. Take a tour of this website to find out more!
           </p>
           <img src={myPhoto} alt="About Me" className="about-image" />
         </div>
@@ -23,12 +23,11 @@ function App() {
       <section className="Skills">
         <h2>Skills</h2>
         <div className="skill-list">
-          <div className="skill-item">JavaScript</div>
-          <div className="skill-item">React</div>
-          <div className="skill-item">Python (Data Analytics)</div>
-          <div className="skill-item">Django</div>
-          <div className="skill-item">SQL</div>
-          <div className="skill-item">Git</div>
+          <div className="skill-item"><a href='https://www.javascript.com/' target="_blank" rel="noopener noreferrer"><FaNodeJs size={50}/></a></div>
+          <div className="skill-item"><a href='https://react.dev/' target="_blank" rel="noopener noreferrer"><FaReact size={50}/></a></div>
+          <div className="skill-item"><a href='https://www.python.org/' target="_blank" rel="noopener noreferrer"><FaPython size={50}/></a></div>
+          <div className="skill-item"><a href='https://www.w3schools.com/sql/sql_intro.asp' target="_blank" rel="noopener noreferrer"><FaDatabase size={50}/></a></div>
+          <div className="skill-item"><a href='https://git-scm.com/' target="_blank" rel="noopener noreferrer"><FaGitAlt size={50}/></a></div>
         </div>
       </section>
 

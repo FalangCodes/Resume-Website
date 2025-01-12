@@ -5,6 +5,7 @@ function Footer() {
   return (
     <footer>
       <div className="footer-content">
+        <h4>CONTACT ME:</h4>
         <p>&copy; 2025 Kgotsofalang Kakudi. All rights reserved.</p>
         <div className="social-links">
           <a href="https://linkedin.com/in/kgotsofalang-kakudi-822214230" target="_blank" rel="noopener noreferrer">
