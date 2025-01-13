@@ -35,7 +35,7 @@ function App() {
       <section className='Projects'>
         <h2>Projects</h2>
         <div className="project-cards-container">
-          <a href="#project1" className="project-card">
+          <a href="https://reactkeyboard.netlify.app/" className="project-card">
             <h3>Virtual Keyboard</h3>
             <p>This is a school project that included using React to develop a virtual keyboard that mimics the functions of a physical keyboard</p>
             <div className="icons">
