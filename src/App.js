@@ -45,7 +45,7 @@ function App() {
             <FaGithub className="icons"/>
           </div>
           </a>
-          <a href="#project2" className="project-card">
+          <a href="https://learniverseweb.netlify.app/" className="project-card">
             <h3>Gamified-Learning Platform</h3>
             <p>Inspired by a 2024 TelkomLearn hackathon, this project is a platform that allows users to learn on the platform in a gamified  and fun way</p>
             <div className="icons">
