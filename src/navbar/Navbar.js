@@ -57,7 +57,7 @@ function Navbar() {
             Education
           </Link>
         </li>
-        <li><a href="\Kgotsofalang_Kakudi_Resume.pdf" target="_blank" rel="noopener noreferrer">
+        <li><a href="\My Resume (online).pdf" target="_blank" rel="noopener noreferrer">
           <button className="view-fullscreen-button">View Resume</button></a>    
         </li>
       </ul>

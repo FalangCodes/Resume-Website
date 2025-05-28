@@ -13,7 +13,9 @@ function App() {
         <h2>About Me</h2>
         <div className="about-content">
           <p>
-            Hello! My name is Kgotsofalang Kakudi, a passionate ICT student and aspiring software developer with a love for backend development and problem-solving. I am constantly learning and growing, aiming to create innovative and efficient solutions. Take a tour of this website to find out more!
+            Hello! My name is Kgotsofalang Kakudi, a passionate ICT student and aspiring software developer with a love 
+            for backend development and problem-solving. I am constantly learning and growing, aiming to create innovative 
+            and efficient solutions. Take a tour of this website to find out more!
           </p>
           <img src={myPhoto} alt="About Me" className="about-image" />
         </div>
@@ -69,14 +71,25 @@ function App() {
       <section className='Experience'>
         <h2>Experience</h2>
         <p>
-          <strong>Human Resources Intern</strong> at The Student Hub - August 2022 to
+          <strong>Student Coordinator</strong> at Sol Plaatje University - March 2025 to Current
+        </p>
+        <ul>
+          <li>Supervise the logistics in bringing together all students and stakeholders within accredited off-campus 
+            accommodation to work towards achieving and providing conducive living and learning environments that promote 
+            social cohesion, leadership development, and recognition programmes in the AOCA residences in ensuring that 
+            all students are exposed to environments that support academic excellence.
+          </li>
+        </ul>
+
+        <p>
+          <strong>ICT FASSET Buddy</strong> at Sol Plaatje University - May 2022 to
           October 2022
         </p>
         <ul>
-          <li>Reviewed employee contracts</li>
-          <li>Reviewed and suggest changes to company policies</li>
-          <li>Learned about contractual laws</li>
-          <li>Made weekly presentation as per company request on learned content</li>
+          <li>Assisting assigned students with ICT related course work</li>
+          <li>Host weekly sessions with assigned students</li>
+          <li>Write monthly reports on the progress of the assigned students and the program</li>
+          <li>Drive a positive impact towards the Fasset program</li>
         </ul>
 
         <p>
@@ -91,14 +104,14 @@ function App() {
         </ul>
 
         <p>
-          <strong>ICT FASSET Buddy</strong> at Sol Plaatje University - May 2022 to
+          <strong>Human Resources Intern</strong> at The Student Hub - August 2022 to
           October 2022
         </p>
         <ul>
-          <li>Assisting assigned students with ICT related course work</li>
-          <li>Host weekly sessions with assigned students</li>
-          <li>Write monthly reports on the progress of the assigned students and the program</li>
-          <li>Drive a positive impact towards the Fasset program</li>
+          <li>Reviewed employee contracts</li>
+          <li>Reviewed and suggest changes to company policies</li>
+          <li>Learned about contractual laws</li>
+          <li>Made weekly presentation as per company request on learned content</li>
         </ul>
       </section>
 
