@@ -71,6 +71,16 @@ function App() {
       <section className='Experience'>
         <h2>Experience</h2>
         <p>
+          <strong>ICT Student Assistant</strong> at Sol Plaatje University - July 2025 to
+          October 2025
+        </p>
+        <ul>
+          <li>Assisting assigned students with ICT related course work</li>
+          <li>Host weekly sessions with assigned students</li>
+          <li>Write monthly reports on the progress of the assigned students and the program</li>
+          <li>Drive a positive impact towards the Fasset program</li>
+        </ul>
+        <p>
           <strong>Student Coordinator</strong> at Sol Plaatje University - March 2025 to Current
         </p>
         <ul>
@@ -82,8 +92,8 @@ function App() {
         </ul>
 
         <p>
-          <strong>ICT FASSET Buddy</strong> at Sol Plaatje University - May 2022 to
-          October 2022
+          <strong>ICT Student Assistant</strong> at Sol Plaatje University - May 2024 to
+          October 2024
         </p>
         <ul>
           <li>Assisting assigned students with ICT related course work</li>
