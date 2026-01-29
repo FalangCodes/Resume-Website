@@ -1,66 +1,57 @@
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 import { Link } from 'react-scroll';
+import { FaBars, FaTimes } from 'react-icons/fa';
 import './Navbar.css';
 
 function Navbar() {
-  const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [click, setClick] = useState(false);
 
-  const toggleMenu = () => setIsMenuOpen(!isMenuOpen);
-
-  useEffect(() => {
-    const handleResize = () => {
-      if (window.innerWidth > 768) {
-        setIsMenuOpen(false);
-      }
-    };
-
-    window.addEventListener('resize', handleResize);
-    return () => {
-      window.removeEventListener('resize', handleResize);
-    };
-  }, []);
+  const handleClick = () => setClick(!click);
+  const closeMobileMenu = () => setClick(false);
 
   return (
-    <nav>
-      <div className="navbar-brand">
-        <Link to="AboutMe" smooth={true}>
+    <nav className="navbar">
+      <div className="navbar-container">
+        
+        {/* LOGO */}
+        <Link to="AboutMe" smooth={true} className="navbar-logo" onClick={closeMobileMenu}>
           Kgotsofalang Kakudi
         </Link>
-      </div>
 
-      <button className="menu-toggle" onClick={toggleMenu}>
-        &#9776; {/* Hamburger icon */}
-      </button>
-      <ul className={`menu ${isMenuOpen ? 'open' : ''}`}>
-        <li>
-          <Link to="AboutMe" smooth={true} activeClass="active" onClick={() => setIsMenuOpen(false)}>
-            About Me
-          </Link>
-        </li>
-        <li>
-          <Link to="Skills" smooth={true} activeClass="active" onClick={() => setIsMenuOpen(false)}>
-            Skills
-          </Link>
-        </li>
-        <li>
-          <Link to="Projects" smooth={true} activeClass="active" onClick={() => setIsMenuOpen(false)}>
-            Projects
-          </Link>
-        </li>
-        <li>
-          <Link to="Experience" smooth={true} activeClass="active" onClick={() => setIsMenuOpen(false)}>
-            Experience
-          </Link>
-        </li>
-        <li>
-          <Link to="Education" smooth={true} activeClass="active" onClick={() => setIsMenuOpen(false)}>
-            Education
-          </Link>
-        </li>
-        <li><a href="\My Resume (online).pdf" target="_blank" rel="noopener noreferrer">
-          <button className="view-fullscreen-button">View Resume</button></a>    
-        </li>
-      </ul>
+        {/* HAMBURGER ICON (Mobile Only) */}
+        <div className="menu-icon" onClick={handleClick}>
+          {click ? <FaTimes /> : <FaBars />}
+        </div>
+
+        {/* MENU */}
+        <ul className={click ? 'nav-menu active' : 'nav-menu'}>
+          <li className="nav-item">
+            <Link to="AboutMe" smooth={true} className="nav-links" onClick={closeMobileMenu}>
+              About Me
+            </Link>
+          </li>
+          <li className="nav-item">
+            <Link to="Skills" smooth={true} className="nav-links" onClick={closeMobileMenu}>
+              Skills
+            </Link>
+          </li>
+          <li className="nav-item">
+            <Link to="Projects" smooth={true} className="nav-links" onClick={closeMobileMenu}>
+              Projects
+            </Link>
+          </li>
+          <li className="nav-item">
+            <Link to="Experience" smooth={true} className="nav-links" onClick={closeMobileMenu}>
+              Experience
+            </Link>
+          </li>
+          <li className="nav-item">
+             <Link to="Education" smooth={true} className="nav-links" onClick={closeMobileMenu}>
+              Education
+            </Link>
+          </li>
+        </ul>
+      </div>
     </nav>
   );
 }

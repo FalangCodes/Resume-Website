@@ -1,142 +1,176 @@
+import React from 'react';
 import './App.css';
-import myPhoto from'./profile.jpg';
 import Navbar from './navbar/Navbar';
 import Footer from './footer/Footer';
-import { FaReact, FaNodeJs, FaDatabase, FaGithub, FaHtml5, FaCss3Alt, FaGitAlt, FaPython  } from 'react-icons/fa';
+
+// 1. Import all the icons you need
+import { FaReact, FaNodeJs, FaDatabase, FaGithub, FaHtml5, FaCss3Alt, FaGitAlt, FaPython } from 'react-icons/fa';
+
+// 2. Import your data
+import { personalInfo, skills, projects, experience, education } from './data/resume-data';
+
+// 3. Create the Icon Lookup Map
+// This converts the string "FaReact" from your data file into the actual component
+const iconComponents = {
+  FaReact: <FaReact size={50} />,
+  FaNodeJs: <FaNodeJs size={50} />,
+  FaDatabase: <FaDatabase size={50} />,
+  FaHtml5: <FaHtml5 size={50} />,
+  FaCss3Alt: <FaCss3Alt size={50} />,
+  FaGitAlt: <FaGitAlt size={50} />,
+  FaPython: <FaPython size={50} />,
+  // Default icon if one is missing
+  default: <FaGithub size={50} />
+};
 
 function App() {
   return (
-    <div>
+    <div className="App">
       <Navbar />
 
+      {/* --- HERO / ABOUT SECTION --- */}
       <section className="AboutMe">
         <h2>About Me</h2>
         <div className="about-content">
-          <p>
-            Hello! My name is Kgotsofalang Kakudi, a passionate ICT student and aspiring software developer with a love 
-            for backend development and problem-solving. I am constantly learning and growing, aiming to create innovative 
-            and efficient solutions. Take a tour of this website to find out more!
-          </p>
-          <img src={myPhoto} alt="About Me" className="about-image" />
+          <div className="about-text">
+            <h3>{personalInfo.name}</h3>
+            <h4>{personalInfo.title}</h4>
+            <p>{personalInfo.about}</p>
+          </div>
+          {/* Note: Ensure profile.jpg is in your public folder or imported if in src */}
+          <img src={personalInfo.photo} alt={personalInfo.name} className="about-image" />
         </div>
       </section>
 
-
-      <section className="Skills">
-        <h2>Skills</h2>
-        <div className="skill-list">
-          <div className="skill-item"><a href='https://www.javascript.com/' target="_blank" rel="noopener noreferrer"><FaNodeJs size={50}/></a></div>
-          <div className="skill-item"><a href='https://react.dev/' target="_blank" rel="noopener noreferrer"><FaReact size={50}/></a></div>
-          <div className="skill-item"><a href='https://www.python.org/' target="_blank" rel="noopener noreferrer"><FaPython size={50}/></a></div>
-          <div className="skill-item"><a href='https://www.w3schools.com/sql/sql_intro.asp' target="_blank" rel="noopener noreferrer"><FaDatabase size={50}/></a></div>
-          <div className="skill-item"><a href='https://git-scm.com/' target="_blank" rel="noopener noreferrer"><FaGitAlt size={50}/></a></div>
+      {/* --- SKILLS SECTION --- */}
+      <section className="Skills" id="Skills">
+        <h2>Technical Proficiency</h2>
+        <div className="skills-grid">
+          {skills.map((categoryGroup, index) => (
+            // We pass the color to the style to make the border dynamic
+            <div 
+              key={index} 
+              className="skill-category-card"
+              style={{ borderTop: `4px solid ${categoryGroup.color}` }} 
+            >
+              <h3 style={{ color: categoryGroup.color }}>{categoryGroup.category}</h3>
+              
+              <div className="skill-items-container">
+                {categoryGroup.items.map((skill, i) => (
+                  <div key={i} className="skill-detail-item">
+                    <span className="skill-name">{skill.name}</span>
+                    <span className="skill-details">{skill.details}</span>
+                  </div>
+                ))}
+              </div>
+            </div>
+          ))}
         </div>
       </section>
 
-
-      <section className='Projects'>
+      {/* --- PROJECTS SECTION --- */}
+      <section className="Projects">
         <h2>Projects</h2>
         <div className="project-cards-container">
-          <a href="https://reactkeyboard.netlify.app/" className="project-card">
-            <h3>Virtual Keyboard</h3>
-            <p>This is a school project that included using React to develop a virtual keyboard that mimics the functions of a physical keyboard</p>
-            <div className="icons">
-            <FaReact className="icon" />
-            <FaNodeJs className="icon" />
-            <FaDatabase className="icon" />
-            <FaGithub className="icons"/>
-          </div>
-          </a>
-          <a href="https://learniverseweb.netlify.app/" className="project-card">
-            <h3>Gamified-Learning Platform</h3>
-            <p>Inspired by a 2024 TelkomLearn hackathon, this project is a platform that allows users to learn on the platform in a gamified  and fun way</p>
-            <div className="icons">
-            <FaReact className="icon" />
-            <FaNodeJs className="icon" />
-            <FaDatabase className="icon" />
-            <FaGithub className="icons"/>
-          </div>
-          </a>
-          <a href="#project3" className="project-card">
-            <h3>University Information Hub</h3>
-            <p>Inspired by a school project, this platform is a place for students to gather Information about South African universities. This is mostly helpful for students looking to study at any public University in South Africa</p>
-            <FaHtml5 size={20} className="icon" />
-            <FaCss3Alt size={20} className="icon" />
-          </a>
+          {projects.map((project, index) => (
+            <a key={index} href={project.link} className="project-card" target="_blank" rel="noopener noreferrer">
+              <h3>{project.title}</h3>
+              <p>{project.description}</p>
+              
+              <div className="tech-stack-container">
+                {/* Rendering tech stack as text "Pills" instead of icons for clarity */}
+                {project.tech.map((tech, i) => (
+                  <span key={i} className="tech-pill">{tech}</span>
+                ))}
+              </div>
+            </a>
+          ))}
         </div>
       </section>
 
-
-
-      <section className='Experience'>
+      {/* --- EXPERIENCE SECTION --- */}
+      <section className="Experience">
         <h2>Experience</h2>
-        <p>
-          <strong>ICT Student Assistant</strong> at Sol Plaatje University - July 2025 to
-          October 2025
-        </p>
-        <ul>
-          <li>Assisting assigned students with ICT related course work</li>
-          <li>Host weekly sessions with assigned students</li>
-          <li>Write monthly reports on the progress of the assigned students and the program</li>
-          <li>Drive a positive impact towards the Fasset program</li>
-        </ul>
-        <p>
-          <strong>Student Coordinator</strong> at Sol Plaatje University - March 2025 to Current
-        </p>
-        <ul>
-          <li>Supervise the logistics in bringing together all students and stakeholders within accredited off-campus 
-            accommodation to work towards achieving and providing conducive living and learning environments that promote 
-            social cohesion, leadership development, and recognition programmes in the AOCA residences in ensuring that 
-            all students are exposed to environments that support academic excellence.
-          </li>
-        </ul>
-
-        <p>
-          <strong>ICT Student Assistant</strong> at Sol Plaatje University - May 2024 to
-          October 2024
-        </p>
-        <ul>
-          <li>Assisting assigned students with ICT related course work</li>
-          <li>Host weekly sessions with assigned students</li>
-          <li>Write monthly reports on the progress of the assigned students and the program</li>
-          <li>Drive a positive impact towards the Fasset program</li>
-        </ul>
-
-        <p>
-          <strong>Peer Mentor</strong> at Sol Plaatje University - February 2024 to
-          November 2024
-        </p>
-        <ul>
-          <li>Provide positive support, practical information, and advice regarding university life.</li>
-          <li>Provide correct avenues to First-Time Entry Students to university resources and support services on campus.</li>
-          <li>Provide positive story-telling and sharing of knowledge and experiences to advance First-Entry students.</li>
-          <li>Regular group and individual consultation and sessions with First-Time-Entry students.</li>
-        </ul>
-
-        <p>
-          <strong>Human Resources Intern</strong> at The Student Hub - August 2022 to
-          October 2022
-        </p>
-        <ul>
-          <li>Reviewed employee contracts</li>
-          <li>Reviewed and suggest changes to company policies</li>
-          <li>Learned about contractual laws</li>
-          <li>Made weekly presentation as per company request on learned content</li>
-        </ul>
+        <div className="timeline">
+          {experience.map((job, index) => (
+            <div key={index} className="experience-item">
+              <div className="job-header">
+                <h3>{job.role}</h3>
+                <span className="company">{job.company}</span>
+                <span className="date">{job.period}</span>
+              </div>
+              <ul>
+                {job.tasks.map((task, i) => (
+                  <li key={i}>{task}</li>
+                ))}
+              </ul>
+            </div>
+          ))}
+        </div>
       </section>
 
-      <section className='Education'>
+      {/* --- EDUCATION SECTION --- */}
+      <section className="Education" id="Education">
         <h2>Education</h2>
-        <p>
-          <strong>Diploma in ICT</strong> - Sol Plaatje University (2023 - 2025)
-        </p>
-        <ul>
-          <li>Focus: Applications Development, Data Analysis & Visualization, Software Engineering</li>
-          <li>1st Year Average: 71% </li>
-          <li>2nd Year Average: 81% </li>
-        </ul>
-      </section>
+        
+        {education.map((edu, index) => {
+          // --- AUTOMATION LOGIC START ---
+          let graduationStatus = null;
+          
+          if (edu.graduationDate) {
+            const today = new Date();
+            const gradDate = new Date(edu.graduationDate);
+            
+            // Format the date to look like "April 2026"
+            const dateString = gradDate.toLocaleDateString('en-US', { month: 'long', year: 'numeric' });
 
+            // Compare dates
+            if (today >= gradDate) {
+              graduationStatus = <span className="status graduated">Graduated: {dateString}</span>;
+            } else {
+              graduationStatus = <span className="status expected">Expected Graduation: {dateString}</span>;
+            }
+          }
+          // --- AUTOMATION LOGIC END ---
+
+          return (
+            <div key={index} className="education-item">
+              <div className="edu-header">
+                <h3>{edu.degree} - NQF {edu.nqf}</h3>
+                <span className="period">{edu.period}</span>
+              </div>
+              
+              <p className="institution"><strong>{edu.institution}</strong></p>
+              
+              {/* Show the Status (Expected vs Graduated) if it exists */}
+              {graduationStatus && <div className="grad-status-container">{graduationStatus}</div>}
+
+              {/* Show Average if it exists */}
+              {edu.average && (
+                <p className="edu-average">
+                  Academic Average: <span className="score">{edu.average}</span>
+                </p>
+              )}
+
+              {/* Show Majors Description */}
+              {edu.majors && (
+                <p className="edu-majors">
+                  <strong>Majors:</strong> {edu.majors}
+                </p>
+              )}
+
+              {/* Show bullet points if you have them (mostly for the Adv Diploma) */}
+              {edu.details && edu.details.length > 0 && (
+                <ul>
+                  {edu.details.map((detail, i) => (
+                    <li key={i}>{detail}</li>
+                  ))}
+                </ul>
+              )}
+            </div>
+          );
+        })}
+      </section>
       <Footer />
     </div>
   );
