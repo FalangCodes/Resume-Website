@@ -3,25 +3,7 @@ import './App.css';
 import Navbar from './navbar/Navbar';
 import Footer from './footer/Footer';
 
-// 1. Import all the icons you need
-import { FaReact, FaNodeJs, FaDatabase, FaGithub, FaHtml5, FaCss3Alt, FaGitAlt, FaPython } from 'react-icons/fa';
-
-// 2. Import your data
 import { personalInfo, skills, projects, experience, education } from './data/resume-data';
-
-// 3. Create the Icon Lookup Map
-// This converts the string "FaReact" from your data file into the actual component
-const iconComponents = {
-  FaReact: <FaReact size={50} />,
-  FaNodeJs: <FaNodeJs size={50} />,
-  FaDatabase: <FaDatabase size={50} />,
-  FaHtml5: <FaHtml5 size={50} />,
-  FaCss3Alt: <FaCss3Alt size={50} />,
-  FaGitAlt: <FaGitAlt size={50} />,
-  FaPython: <FaPython size={50} />,
-  // Default icon if one is missing
-  default: <FaGithub size={50} />
-};
 
 function App() {
   return (
